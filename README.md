@@ -21,6 +21,11 @@ tradition of **good enough**.
 FAQ
 ===
 
+Which versions of Python are supported?
+---------------------------------------
+
+cPython 2.5 - 2.7
+
 Why does 0/0 not work?
 ----------------------
 

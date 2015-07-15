@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import ctypes
 import sys
 import atexit
