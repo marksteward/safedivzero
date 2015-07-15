@@ -9,13 +9,16 @@ class PyObject(ctypes.Structure):
         ('ob_type', ctypes.c_void_p),
     ]
 
-class Zero(int):
+class SafeZero(int):
     def __new__(self):
         return int.__new__(self, 0)
 
     def __rdiv__(self, other):
-        # nobody goes higher than this, right?
-        return sys.maxint
+        if other > 0:
+            # nobody goes higher than this, right?
+            return sys.maxint
+
+        return -sys.maxint - 1
 
 class Replaced(object):
     def __init__(self):
@@ -43,7 +46,7 @@ class Replaced(object):
         del self.replaced[:]
 
 replaced = Replaced()
-replaced.add(0, Zero())
+replaced.add(0, SafeZero())
 
 @atexit.register
 def cleanup():
