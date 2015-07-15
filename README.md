@@ -9,7 +9,7 @@ Usage
 =====
 
 ```
->>> import safedivide
+>>> import safedivzero
 >>> hex(1 / 0)
 ```
 
