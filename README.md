@@ -24,5 +24,5 @@ FAQ
 Why does 0/0 not work?
 ----------------------
 
-Ask the [mathematicians][https://en.wikipedia.org/wiki/Indeterminate_form]. If you're trying to get the mean
+Ask the [mathematicians](https://en.wikipedia.org/wiki/Indeterminate_form). If you're trying to get the mean
 of an empty set, the answer is probably None.
